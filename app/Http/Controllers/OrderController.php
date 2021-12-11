@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -34,7 +35,22 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
+
+        Order::create([
+            'nama_pembeli' => $request->nama_pembeli,
+            'email_pembeli' => $request->email_pembeli,
+            'no_hp_pembeli' => $request->no_hp_pembeli,
+            'nama_produk' => $request->nama_produk,
+            'jumlah_produk' => $request->jumlah_produk,
+            'alamat_pembeli' => $request->alamat_pembeli,
+            'keterangan_pembeli' => $request->keterangan_pembeli,
+
+
+        ]);
+
+        return redirect('checkout-product')->with('berhasil', 'data berhasil di tambahkan');
+
     }
 
     /**

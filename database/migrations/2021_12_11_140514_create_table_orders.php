@@ -17,9 +17,9 @@ class CreateTableOrders extends Migration
             $table->id();
             $table->string('nama_pembeli');
             $table->string('email_pembeli');
-            $table->integer('no_hp_pembeli');
+            $table->bigInteger('no_hp_pembeli');
             $table->string('nama_produk');
-            $table->integer('jumlah_produk');
+            $table->string('jumlah_produk');
             $table->string('alamat_pembeli');
             $table->string('keterangan_pembeli');
             $table->timestamps();
