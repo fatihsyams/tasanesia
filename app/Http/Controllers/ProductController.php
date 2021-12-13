@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -14,7 +15,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('product-master');
+        $data = Product::all();
+        return view('master.management-produk', ['products' => $data]);
     }
 
     /**
@@ -24,7 +26,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('layouts.product.product-master');
     }
 
     /**
@@ -83,7 +85,9 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Product::find($id);
+        // dd($data);
+        return view('layouts.product.edit-product', compact('data'));
     }
 
     /**
@@ -106,6 +110,10 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $data = Product::find($id);
+       $data->delete();
+
+
+        return back()->with('product_delete', 'data sudah di delete');
     }
 }

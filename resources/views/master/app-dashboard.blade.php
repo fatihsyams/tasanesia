@@ -80,7 +80,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2 py-3 bg-success">
-                <p class="py-2 text-center bg-white" style="border-radius: 10px;"><a href="{{ route('create-product') }}" style="color: black; text-decoration: none;">Manajemen Produk</a></p>
+                <p class="py-2 text-center bg-white" style="border-radius: 10px;"><a href="{{route('management-product')}}" style="color: black; text-decoration: none;">Manajemen Produk</a></p>
                 <p class="py-2 text-center bg-white" style="border-radius: 10px;"><a href="" style="color: black; text-decoration: none;">Manajemen Pesanan</a></p>
             </div>
             <div class="col-lg-8">
