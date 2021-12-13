@@ -37,12 +37,18 @@ Route::get('/testing', function () {
 Route::get('/campaign2', function () {
     return view('layouts/halal-food-campaign');
 });
-Route::get('/menu', function () {
-    return view('layouts/menu-product');
-});
+
+
+
 Route::get('/menu-detail', function () {
     return view('layouts/detail-product');
 });
+Route::get('/order', function () {
+    return view('layouts/order-product');
+});
+
+
+
 
 // Route::get('/create-product', function () {
 //     return view('master.product-master');
@@ -52,6 +58,7 @@ Route::get('/menu-detail', function () {
 
 Route::get('/create-product', [App\Http\Controllers\ProductController::class, 'index'])->name('create-product');
 Route::post('/simpan-product', [App\Http\Controllers\ProductController::class, 'store'])->name('simpan-product'); 
+Route::get('/show-product',  [App\Http\Controllers\ProductController::class, 'show'])->name('show-product'); 
 
 Route::get('/checkout-product', [App\Http\Controllers\OrderController::class, 'index'])->name('checkout-product');
 Route::post('/order-product', [App\Http\Controllers\OrderController::class, 'store'])->name('order-product'); 

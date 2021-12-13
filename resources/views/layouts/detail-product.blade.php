@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,8 +17,11 @@
     <title>Hello, world!</title>
   </head>
   <body>
+    <!-- Navbar -->
+    @include('partials.navbar')
+    <!-- End Navbar -->
     <section class="id">
-      <div class="container">
+      <div class="container hero">
         <div class="row">
           <div class="col-lg-6">
             <img
@@ -27,12 +31,12 @@
             />
           </div>
           <div class="col-lg-6">
-            <h2 style="color: #28a745"">Caladium Red Stardust</h2>
+            <h2 style="color: #28a745">Caladium Red Stardust</h2>
             <p class="mt-4">Stock : 5000</p>
             <p>Price: $5</p>
             <p>Category: Low</p>
 
-            <a href="" class="btn btn-primary" >Order Now</a>
+            <a href="/order" class="btn btn-primary" >Order Now</a>
           </div>
           <h2 style="color: #28a745" class="mt-4">Description</h2>
           <hr style="width: 10%;" class="ms-3">
@@ -48,7 +52,9 @@
         </div>
       </div>
     </section>
-
+    <!-- Navbar -->
+    @include('partials.footer')
+    <!-- End Navbar -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

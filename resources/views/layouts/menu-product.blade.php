@@ -26,187 +26,33 @@
     @include('partials.navbar')
     <!-- End Navbar -->
     <section class="id">
-      <div class="container">
+      <div class="container hero">
         <div class="row">
+           @foreach($products as $product)
           <div class="col-lg-3 mt-md-3">
             <div class="card" style="width: 18rem">
-              <img
-                src="assets/agro.jfif"
-                class="card-img-top"
-                alt="..."
-                style="width: 100%; height: 77%"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Caladium Red Stardust</h5>
-                <div class="row">
-                  <div class="col-6">
-                    <p style="color: #fbc531">$5</p>
-                  </div>
-                  <div class="col-6">
-                    <p class="text-end">Medium</p>
-                  </div>
-                </div>
+            <img
+            src="{{$product['gambar_produk']}}"
+            class="card-img-top"
+            alt="..."
+            style="width: 100%; height: 77%"
+            />
+            <div class="card-body">
+              <h5 class="card-title"><a class="normal-anchor" href="/menu-detail">{{$product['nama_produk']}}</a></h5>
+              <div class="row">
+              <div class="col-6">
+              <p style="color: #fbc531">{{$product['harga_produk']}}</p>
               </div>
+              <div class="col-6">
+              <p class="text-end">{{$product['status_produk']}}</p>
             </div>
-          </div>
 
-          <div class="col-lg-3 mt-md-3">
-            <div class="card" style="width: 18rem">
-              <img
-                src="assets/agro.jfif"
-                class="card-img-top"
-                alt="..."
-                style="width: 100%; height: 77%"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Caladium Red Stardust</h5>
-                <div class="row">
-                  <div class="col-6">
-                    <p style="color: #fbc531">$5</p>
-                  </div>
-                  <div class="col-6">
-                    <p class="text-end">Medium</p>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-
-          <div class="col-lg-3 mt-md-3">
-            <div class="card" style="width: 18rem">
-              <img
-                src="assets/agro.jfif"
-                class="card-img-top"
-                alt="..."
-                style="width: 100%; height: 77%"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Caladium Red Stardust</h5>
-                <div class="row">
-                  <div class="col-6">
-                    <p style="color: #fbc531">$5</p>
-                  </div>
-                  <div class="col-6">
-                    <p class="text-end">Medium</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 mt-md-3">
-            <div class="card" style="width: 18rem">
-              <img
-                src="assets/agro.jfif"
-                class="card-img-top"
-                alt="..."
-                style="width: 100%; height: 77%"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Caladium Red Stardust</h5>
-                <div class="row">
-                  <div class="col-6">
-                    <p style="color: #fbc531">$5</p>
-                  </div>
-                  <div class="col-6">
-                    <p class="text-end">Medium</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-
-        <div class="row">
-          <div class="col-lg-3 mt-md-3">
-            <div class="card" style="width: 18rem">
-              <img
-                src="assets/agro.jfif"
-                class="card-img-top"
-                alt="..."
-                style="width: 100%; height: 77%"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Caladium Red Stardust</h5>
-                <div class="row">
-                  <div class="col-6">
-                    <p style="color: #fbc531">$5</p>
-                  </div>
-                  <div class="col-6">
-                    <p class="text-end">Medium</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 mt-md-3">
-            <div class="card" style="width: 18rem">
-              <img
-                src="assets/agro.jfif"
-                class="card-img-top"
-                alt="..."
-                style="width: 100%; height: 77%"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Caladium Red Stardust</h5>
-                <div class="row">
-                  <div class="col-6">
-                    <p style="color: #fbc531">$5</p>
-                  </div>
-                  <div class="col-6">
-                    <p class="text-end">Medium</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 mt-md-3">
-            <div class="card" style="width: 18rem">
-              <img
-                src="assets/agro.jfif"
-                class="card-img-top"
-                alt="..."
-                style="width: 100%; height: 77%"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Caladium Red Stardust</h5>
-                <div class="row">
-                  <div class="col-6">
-                    <p style="color: #fbc531">$5</p>
-                  </div>
-                  <div class="col-6">
-                    <p class="text-end">Medium</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 mt-md-3">
-            <div class="card" style="width: 18rem">
-              <img
-                src="assets/agro.jfif"
-                class="card-img-top"
-                alt="..."
-                style="width: 100%; height: 77%"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Caladium Red Stardust</h5>
-                <div class="row">
-                  <div class="col-6">
-                    <p style="color: #fbc531">$5</p>
-                  </div>
-                  <div class="col-6">
-                    <p class="text-end">Medium</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+         @endforeach
       </div>
+    </div>
+
     </section>
     <!-- Navbar -->
     @include('partials.footer')

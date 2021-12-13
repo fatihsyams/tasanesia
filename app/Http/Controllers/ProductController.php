@@ -42,7 +42,7 @@ class ProductController extends Controller
         ]);
     
         $file_name = $request->gambar_produk->getClientOriginalName();
-        $image = $request->gambar_produk->storeAs('img', $file_name);
+        $image = $request->gambar_produk->move('img', $file_name);
 
         Product::create([
             'nama_produk' => $request->nama_produk,
@@ -69,9 +69,10 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-
+    public function show(Product $product)
+    {   
+        $data = Product::all();
+        return view('layouts.menu-product', ['products' => $data]);
     }
 
     /**
