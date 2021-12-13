@@ -31,7 +31,7 @@
                             <input type="text" id="status_produk" name="status_produk", class="form-control", value="{{ $data->status_produk }}">
                         </div>
 
-                        <img src=" {{ $data['gambar_produk'] }}" class="card-img-top ms-auto" alt="..." style="width: 80px; height: 30%;"/>
+                        <img src=" {{ asset($data['gambar_produk']) }}" class="card-img-top ms-auto" alt="..." style="width: 80px; height: 30%;"/>
 
                         <div class="form-group">
                             <input type="file" id="gambar_produk" name="gambar_produk" class="form-control" value="">

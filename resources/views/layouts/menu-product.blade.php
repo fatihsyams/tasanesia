@@ -29,7 +29,7 @@
       <div class="container hero">
         <div class="row">
            @foreach($products as $product)
-          <div class="col-lg-3 mt-md-3">
+          <div class="col-lg-4 mt-md-3">
             <div class="card" style="width: 18rem">
             <img
             src="{{$product['gambar_produk']}}"
