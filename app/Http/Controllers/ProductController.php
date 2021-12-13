@@ -77,6 +77,13 @@ class ProductController extends Controller
         return view('layouts.menu-product', ['products' => $data]);
     }
 
+    public function detail($id)
+    {
+       $data = Product::find($id);
+    //    dd($data);
+       return view('layouts.product.detail-product', compact('data'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

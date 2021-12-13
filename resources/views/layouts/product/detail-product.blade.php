@@ -25,30 +25,22 @@
         <div class="row">
           <div class="col-lg-6">
             <img
-              src="assets/agro.jfif"
+              src=" {{ asset($data['gambar_produk']) }}"
               alt=""
               style="width: 100%; border-radius: 10px"
             />
           </div>
-          <div class="col-lg-6">
-            <h2 style="color: #28a745">Caladium Red Stardust</h2>
-            <p class="mt-4">Stock : 5000</p>
-            <p>Price: $5</p>
-            <p>Category: Low</p>
+          <div class="col-lg-6 mt-5">
+            <h2 style="color: #28a745">{{ $data->nama_produk }}</h2>
+            <p class="mt-4">{{ $data->jumlah_produk }}</p>
+            <p>{{ $data->harga_produk }}</p>
+            <p>{{ $data->status_produk }}</p>
 
             <a href="/order" class="btn btn-primary" >Order Now</a>
           </div>
           <h2 style="color: #28a745" class="mt-4">Description</h2>
           <hr style="width: 10%;" class="ms-3">
-          <p class="mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-               printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-
-                <p class="mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-               printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          <p class="mt-2">{{ $data->keterangan_produk }}</p>
         </div>
       </div>
     </section>

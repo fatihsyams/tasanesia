@@ -38,7 +38,7 @@
             style="width: 100%; height: 77%"
             />
             <div class="card-body">
-              <h5 class="card-title"><a class="normal-anchor" href="/menu-detail">{{$product['nama_produk']}}</a></h5>
+              <h5 class="card-title"><a class="normal-anchor" href="{{ route('detail-product', $product->id) }}">{{$product['nama_produk']}}</a></h5>
               <div class="row">
               <div class="col-6">
               <p style="color: #fbc531">{{$product['harga_produk']}}</p>
