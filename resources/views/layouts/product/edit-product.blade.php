@@ -8,7 +8,7 @@
                 <div class="card-header">Edit Product</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('simpan-product') }}" enctype="multipart/form-data">
+                    <form method="PATCH" action="{{ url('update-product/' .$data->id) }}" enctype="multipart/form-data">
                         {{ csrf_field()}}
                     
                         <div class="form-group">

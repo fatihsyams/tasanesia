@@ -27,7 +27,8 @@
     <!-- End Navbar -->
     <section class="id">
       <div class="container hero">
-        <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
            @foreach($products as $product)
           <div class="col-lg-4 mt-md-3">
             <div class="card" style="width: 18rem">
@@ -51,6 +52,7 @@
         </div>
          @endforeach
       </div>
+        </div>
     </div>
 
     </section>

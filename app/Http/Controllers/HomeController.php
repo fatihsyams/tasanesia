@@ -28,7 +28,7 @@ class HomeController extends Controller
         $role = Auth::user()->role;
 
         if($role == 'admin'){
-             return view('master.app-dashboard');   
+             return view('dashboard-admin');   
         } 
 
         if($role == 'member'){
