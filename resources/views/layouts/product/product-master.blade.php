@@ -23,6 +23,14 @@
                             <input type="number" id="jumlah_produk" name="jumlah_produk", class="form-control", placeholder="jumlah_produk">
                         </div>
 
+                        <div class="form-group col-md-4">
+                            <label for="inputState">Kategori</label>
+                            <select id="kategory_produk">
+                                <option value="halal-food">halal-food</option>
+                                <option value="ornamental-plants">ornamental-plants</option>
+                                <option value="fresh-fruit">fresh-fruit</option>
+                            </select>
+                        </div>
                         <div class="form-group">
                             <input type="text" id="keterangan_produk" name="keterangan_produk", class="form-control", placeholder="keterangan_produk">
                         </div>

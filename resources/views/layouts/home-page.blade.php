@@ -277,9 +277,9 @@
                     alt=""
                     style="max-width: 100%"
                   />
-                  <h4 class="text-wrap mt-2 mb-3" style="text-align: center">
+                  <a class="text-wrap mt-2 mb-3" style="text-align: center" href="{{ url('show-product?kategory_produk=halal-food') }}">
                     Halal Food
-                  </h4>
+</a >
                   <p class="text-wrap p-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Donec nec nunc ultrices est suscipit ullamcorper id vitae

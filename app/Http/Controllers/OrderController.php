@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -12,9 +14,11 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('partials.order');
+        $user = Auth::user();
+        $produk = Product::find($request->produk_id);
+        return view('partials.order', ['user' => $user], ['produk' => $produk]);
     }
 
     public function indexDashboard()

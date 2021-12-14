@@ -47,9 +47,13 @@ Route::get('/menu-detail', function () {
     return view('layouts/detail-product');
 });
 
-Route::get('/order', function () {
-    return view('layouts/order-product');
-});
+// Route::get('/order', function () {
+    
+//     $user = Auth::user();
+//         // dd($user);
+//         return view('partials.order', ['user' => $user]);
+//     // return view('layouts/order-product');
+// });
 
 
 Route::get('/pembina', function () {
@@ -67,7 +71,7 @@ Route::get('/petani', function () {
 // });
 
 // Route::resource('/create-product', MenuController::class);
-
+Route::get('/order', [App\Http\Controllers\OrderController::class, 'index'])->name('order-product');
 Route::get('/checkout-product', [App\Http\Controllers\OrderController::class, 'index'])->name('checkout-product');
 Route::post('/order-product', [App\Http\Controllers\OrderController::class, 'store'])->name('order-product'); 
 
@@ -79,11 +83,15 @@ Route::get('/detail-product/{id}', [App\Http\Controllers\ProductController::clas
 
 //DASHBOARD ADMIN ROUTES
 Route::group(['middleware' => ['admin']], function () {
+
+    // Home
+      Route::get('/dashboard-admin', [App\Http\Controllers\HomeController::class, 'index'])->name('management-product');
+
     Route::get('/management-produk', [App\Http\Controllers\ProductController::class, 'index'])->name('management-product');
     Route::get('/management-order', [App\Http\Controllers\OrderController::class, 'indexDashboard'])->name('management-order');
-    Route::get('/dashboard-admin', function(){
-    return view('master.app-dashboard');
-});
+//     Route::get('/dashboard-admin', function(){
+//     return view('master.app-dashboard');
+// });
 Route::get('/dashboard-admin', function(){
     return view('master.app-dashboard');
 });

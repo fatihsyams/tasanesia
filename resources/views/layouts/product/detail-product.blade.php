@@ -36,7 +36,7 @@
             <p>{{ $data->harga_produk }}</p>
             <p>{{ $data->status_produk }}</p>
 
-            <a href="/order" class="btn btn-primary" >Order Now</a>
+            <a href="{{url('order?produk_id='.$data->id)}}" class="btn btn-primary" >Order Now</a>
           </div>
           <h2 style="color: #28a745" class="mt-4">Description</h2>
           <hr style="width: 10%;" class="ms-3">

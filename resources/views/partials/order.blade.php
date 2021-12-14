@@ -28,9 +28,9 @@
 
     <title>Tasanesia | Contact</title>
     <style>
-        .ftco-section {
+        /* .ftco-section {
             
-        }
+        } */
       @media (max-width: 767.98px) { 
        
         .row1{
@@ -78,7 +78,7 @@
                             <label for="nama_pembeli" class="col-md-4 col-form-label text-md-right">Nama Pembeli</label>
 
                             <div class="col-md-6">
-                                <input id="nama_pembeli" type="text" class="form-control @error('nama_pembeli') is-invalid @enderror" name="nama_pembeli" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="nama_pembeli" type="text" class="form-control @error('nama_pembeli') is-invalid @enderror" name="nama_pembeli" value="{{ $user->name }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -120,7 +120,7 @@
                             <label for="nama_produk" class="col-md-4 col-form-label text-md-right">Nama Produk</label>
 
                             <div class="col-md-6">
-                                <input id="nama_produk" type="text" class="form-control @error('nama_produk') is-invalid @enderror" name="nama_produk" value="{{ old('nama_produk') }}" required autocomplete="nama_produk" autofocus>
+                                <input id="nama_produk" type="text" class="form-control @error('nama_produk') is-invalid @enderror" name="nama_produk" value="{{ old('nama_produk', $produk->nama_produk) }}" required autocomplete="nama_produk" autofocus>
 
                                 @error('nama_produk')
                                     <span class="invalid-feedback" role="alert">
