@@ -19,9 +19,15 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('style.css') }}" rel="stylesheet">
+    <style>
+        #app {
+            background-image:url(asset('assets/img/daun.png'));
+        }
+    </style>
 </head>
+
 <body>
-    <div id="app">
+    <div id="app" style="">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">

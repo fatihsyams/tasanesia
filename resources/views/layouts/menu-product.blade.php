@@ -25,35 +25,37 @@
     <!-- Navbar -->
     @include('partials.navbar')
     <!-- End Navbar -->
-    <section class="id">
+<section class="id">
       <div class="container hero">
+      
         <div class="row">
            @foreach($products as $product)
-          <div class="col-lg-4 mt-md-3">
-            <div class="card" style="width: 18rem">
-            <img
-            src="{{$product['gambar_produk']}}"
-            class="card-img-top"
-            alt="..."
-            style="width: 100%; height: 77%"
-            />
-            <div class="card-body">
-              <h5 class="card-title"><a class="normal-anchor" href="{{ route('detail-product', $product->id) }}">{{$product['nama_produk']}}</a></h5>
-              <div class="row">
-              <div class="col-6">
-              <p style="color: #fbc531">{{$product['harga_produk']}}</p>
-              </div>
-              <div class="col-6">
-              <p class="text-end">{{$product['status_produk']}}</p>
-            </div>
-
+            <div class="col-lg-4 mt-md-3">
+              <div class="card" style="width: 18rem">
+                <img
+                src="{{$product['gambar_produk']}}"
+                class=" img-fluid card-img-top"
+                alt="..."
+                style="width: 100%; max-height: 285px"
+                />
+                <div class="card-body">
+                    <h5 class="card-title"><a class="normal-anchor" href="/menu-detail">{{$product['nama_produk']}}</a></h5>
+                    <div class="row">
+                       <div class="col-6">
+                         <p style="color: #fbc531">Rp. {{$product['harga_produk']}}</p>
+                       </div>
+                       <div class="col-6">
+                         <p class="text-end">{{$product['status_produk']}}</p>
+                       </div>
+                    </div>
+                </div>
             </div>
         </div>
          @endforeach
       </div>
-    </div>
 
-    </section>
+    </div>
+</section>
     <!-- Navbar -->
     @include('partials.footer')
     <!-- End Navbar -->

@@ -34,21 +34,33 @@ Route::get('/campaign-menu', function () {
 Route::get('/testing', function () {
     return view('layouts/testing-page');
 });
+
 Route::get('/campaign2', function () {
     return view('layouts/halal-food-campaign');
 });
 
-
+Route::get('/menu', function () {
+    return view('layouts/menu-product');
+});
 
 Route::get('/menu-detail', function () {
     return view('layouts/detail-product');
 });
+
 Route::get('/order', function () {
     return view('layouts/order-product');
 });
 
 Route::get('/dashboard-admin', function(){
     return view('master.app-dashboard');
+});
+
+Route::get('/pembina', function () {
+    return view('layouts/auth-pembina');
+});
+
+Route::get('/petani', function () {
+    return view('layouts/auth-petani');
 });
 
 
