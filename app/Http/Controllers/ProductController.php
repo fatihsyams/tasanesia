@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Facade\FlareClient\Stacktrace\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -106,7 +107,27 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // $data = Product::find($id);
+
+        // // $destination = 'img'.$data->gambar_produk;
+        // // if(File::exists($destination))
+        // // {
+        // //     File::delete();
+        // // }
+
+        // // $file = $request->file('gambar_produk');
+        // // $extention = $file->getClientOriginalName();
+        // // $filename = 
+
+        
+        // $data->nama_produk = $request->input('nama_produk');
+        // $data->harga_produk = $request->input('harga_produk');
+        // $data->jumlah_produk = $request->input('jumlah_produk');
+        // $data->keterangan_produk = $request->input('keterangan');
+        // $data->status_produk = $request->input('status_produk');    
+
+        // return back('Update berhasil', compact('data'));
+
     }
 
     /**
@@ -121,6 +142,6 @@ class ProductController extends Controller
        $data->delete();
 
 
-        return back()->with('product_delete', 'data sudah di delete');
+        return back()->with('update-product', 'data sudah di delete');
     }
 }

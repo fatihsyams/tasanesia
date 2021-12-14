@@ -51,9 +51,6 @@ Route::get('/order', function () {
     return view('layouts/order-product');
 });
 
-Route::get('/dashboard-admin', function(){
-    return view('master.app-dashboard');
-});
 
 Route::get('/pembina', function () {
     return view('layouts/auth-pembina');
@@ -75,19 +72,32 @@ Route::get('/checkout-product', [App\Http\Controllers\OrderController::class, 'i
 Route::post('/order-product', [App\Http\Controllers\OrderController::class, 'store'])->name('order-product'); 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/show-product',  [App\Http\Controllers\ProductController::class, 'show'])->name('show-product');   
+Route::get('/detail-product/{id}', [App\Http\Controllers\ProductController::class, 'detail'])->name('detail-product');
+
+
 
 //DASHBOARD ADMIN ROUTES
 Route::group(['middleware' => ['admin']], function () {
     Route::get('/management-produk', [App\Http\Controllers\ProductController::class, 'index'])->name('management-product');
+    Route::get('/management-order', [App\Http\Controllers\OrderController::class, 'indexDashboard'])->name('management-order');
     Route::get('/dashboard-admin', function(){
     return view('master.app-dashboard');
 });
+Route::get('/dashboard-admin', function(){
+    return view('master.app-dashboard');
+});
+
     Route::get('/create-product', [App\Http\Controllers\ProductController::class, 'create'])->name('create-product');
     Route::post('/simpan-product', [App\Http\Controllers\ProductController::class, 'store'])->name('simpan-product'); 
+    Route::patch('/update-product/{id}', [App\Http\Controllers\ProductController::class, 'update'])->name('update-product'); 
     Route::delete('/delete-product/{id}', [App\Http\Controllers\ProductController::class, 'destroy'])->name('delete-product');
     Route::get('/edit-product/{id}', [App\Http\Controllers\ProductController::class, 'edit'])->name('edit-product');
-    Route::get('/detail-product/{id}', [App\Http\Controllers\ProductController::class, 'detail'])->name('detail-product');
-    Route::get('/show-product',  [App\Http\Controllers\ProductController::class, 'show'])->name('show-product'); 
+
+    //order
+
+    
+
     //index
     //certificate
     //voucher

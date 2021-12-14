@@ -17,6 +17,15 @@ class OrderController extends Controller
         return view('partials.order');
     }
 
+    public function indexDashboard()
+    {
+        $data = Order::all();
+        return view('layouts.order.index-dashboard', ['orders' => $data]);
+
+        // return view('layouts.order.index-dashboard');
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -24,7 +33,6 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**

@@ -27,7 +27,6 @@
     <!-- End Navbar -->
 <section class="id">
       <div class="container hero">
-      
         <div class="row">
            @foreach($products as $product)
             <div class="col-lg-4 mt-md-3">
@@ -53,7 +52,6 @@
         </div>
          @endforeach
       </div>
-
     </div>
 </section>
     <!-- Navbar -->

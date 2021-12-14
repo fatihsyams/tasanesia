@@ -34,7 +34,7 @@
             <td>{{ $product->status_produk }}</td>
               <td>
                 <form action="{{ route('delete-product', $product->id) }}" method="POST">
-                    <a href="cc" class="btn btn-primary">Edit</a>
+                    <a href="{{ route('edit-product', $product->id) }}" class="btn btn-primary">Edit</a>
     
                    
                      {{ csrf_field() }}
