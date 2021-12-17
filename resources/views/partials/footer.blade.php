@@ -38,7 +38,6 @@
               <p class="mt-2"><a href="https://lazismu.org">LazisMU</a></p>
               <p class="mt-2"><a href="https://www.bio-hutanea.com">Bio Hutanea</a></p>
               <p class="mt-2"><a href="https://umsida.ac.id">UMSIDA</a></p>
-              <p class="mt-2"><a href="https://pelitadesanursery.com">Pelita Desa</a></p>
               <p class="mt-2"><a href="http://uml.ac.id">UML</a></p>
               <p class="mt-2"><a href="https://www.umko.ac.id">UMKO</a></p>
             </div>

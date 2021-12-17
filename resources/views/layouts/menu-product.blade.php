@@ -20,6 +20,11 @@
       rel="stylesheet"
     />
     <title>Tasanesia | Product</title>
+    <style>
+      .normal-anchor:hover {
+        color:#28a745;
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar -->
@@ -29,16 +34,16 @@
       <div class="container hero">
         <div class="row">
            @foreach($products as $product)
-            <div class="col-lg-4 mt-md-3">
+            <div class="col-lg-3 mt-md-3">
               <div class="card" style="width: 18rem">
                 <img
                 src="{{$product['gambar_produk']}}"
                 class=" img-fluid card-img-top"
                 alt="..."
-                style="width: 100%; max-height: 285px"
+                style="width: 100%; max-height: 188px"
                 />
                 <div class="card-body">
-                    <h5 class="card-title"><a class="normal-anchor" href="{{ route('detail-product', $product->id) }}">{{$product['nama_produk']}}</a></h5>
+                    <h5 class="card-title"><a class="normal-anchor" href="{{ route('detail-product', $product->id) }}" >{{$product['nama_produk']}}</a></h5>
                     <div class="row">
                        <div class="col-6">
                          <p style="color: #fbc531">Rp. {{$product['harga_produk']}}</p>

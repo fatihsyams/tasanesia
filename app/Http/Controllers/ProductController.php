@@ -51,7 +51,7 @@ class ProductController extends Controller
             'nama_produk' => $request->nama_produk,
             'harga_produk' => $request->harga_produk,
             'jumlah_produk' => $request->jumlah_produk,
-            'kategory_produk_produk' => $request->kategory_produk,
+            'kategory_produk' => $request->kategory_produk,
             'keterangan_produk' => $request->keterangan_produk,
             'gambar_produk' => $image,
             'status_produk' => $request->status_produk,
@@ -86,6 +86,21 @@ class ProductController extends Controller
        
         // dd($data);
         return view('layouts.menu-product', ['products' => $data]);
+    }
+
+    public function show2(Request $request)
+    {
+        $data = Product::all();
+
+        if ($request->has('kategory_produk')) {
+             $data = $data->where('kategory_produk', $request->kategory_produk);
+        }
+        // $data->get();
+
+        
+       
+        // dd($data);
+        return view('layouts.home-page', ['products' => $data]);
     }
 
     public function detail($id)

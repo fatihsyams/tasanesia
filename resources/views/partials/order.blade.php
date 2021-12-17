@@ -64,7 +64,7 @@
       </div>
     </section> -->
     <section class="main" >
-    <div class="container" >
+    <div class="container hero" >
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -75,7 +75,7 @@
                        {{ csrf_field()}}
 
                         <div class="row mb-3">
-                            <label for="nama_pembeli" class="col-md-4 col-form-label text-md-right">Nama Pembeli</label>
+                            <label for="nama_pembeli" class="col-md-4 col-form-label text-md-right">Name</label>
 
                             <div class="col-md-6">
                                 <input id="nama_pembeli" type="text" class="form-control @error('nama_pembeli') is-invalid @enderror" name="nama_pembeli" value="{{ $user->name }}" required autocomplete="email" autofocus>
@@ -92,7 +92,7 @@
                             <label for="email_pembeli" class="col-md-4 col-form-label text-md-right">Email</label>
 
                             <div class="col-md-6">
-                                <input id="email_pembeli" type="email" class="form-control @error('email_pembeli') is-invalid @enderror" name="email_pembeli" value="{{ old('email_pembeli') }}" required autocomplete="email" autofocus>
+                                <input id="email_pembeli" type="email" class="form-control @error('email_pembeli') is-invalid @enderror" name="email_pembeli" value="{{ $user->email }}" required autocomplete="email" autofocus>
 
                                 @error('email_pembeli')
                                     <span class="invalid-feedback" role="alert">
@@ -106,7 +106,7 @@
                             <label for="no_hp_pembeli" class="col-md-4 col-form-label text-md-right">No. Handphone</label>
 
                             <div class="col-md-6">
-                                <input id="no_hp_pembeli" type="number" class="form-control @error('no_hp_pembeli') is-invalid @enderror" name="no_hp_pembeli" value="{{ old('no_hp_pembeli') }}" required autocomplete="email" autofocus>
+                                <input id="no_hp_pembeli" type="number" class="form-control @error('no_hp_pembeli') is-invalid @enderror" name="no_hp_pembeli" value="{{ $user->no_hp }}" required autocomplete="email" autofocus>
 
                                 @error('no_hp_pembeli')
                                     <span class="invalid-feedback" role="alert">
@@ -117,10 +117,10 @@
                         </div>
 
                           <div class="row mb-3">
-                            <label for="nama_produk" class="col-md-4 col-form-label text-md-right">Nama Produk</label>
+                            <label for="nama_produk" class="col-md-4 col-form-label text-md-right">Product Name</label>
 
                             <div class="col-md-6">
-                                <input id="nama_produk" type="text" class="form-control @error('nama_produk') is-invalid @enderror" name="nama_produk" value="{{ old('nama_produk', $produk->nama_produk) }}" required autocomplete="nama_produk" autofocus>
+                                <input id="nama_produk" type="text" class="form-control @error('nama_produk') is-invalid @enderror" name="nama_produk" value="{{ $produk->nama_produk }}" required autocomplete="nama_produk" autofocus readonly>
 
                                 @error('nama_produk')
                                     <span class="invalid-feedback" role="alert">
@@ -131,10 +131,10 @@
                         </div>
 
                           <div class="row mb-3">
-                            <label for="jumlah_produk" class="col-md-4 col-form-label text-md-right">Jumlah</label>
+                            <label for="jumlah_produk" class="col-md-4 col-form-label text-md-right">Total order</label>
 
                             <div class="col-md-6">
-                                <input id="jumlah_produk" type="text" class="form-control @error('jumlah_produk') is-invalid @enderror" name="jumlah_produk" value="{{ old('jumlah_produk') }}" required autocomplete="email" autofocus>
+                                <input id="jumlah_produk" type="number" class="form-control @error('jumlah_produk') is-invalid @enderror" name="jumlah_produk" value="{{ old('jumlah_produk') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -145,7 +145,7 @@
                         </div>
 
                           <div class="row mb-3">
-                            <label for="alamat_pembeli" class="col-md-4 col-form-label text-md-right">Alamat</label>
+                            <label for="alamat_pembeli" class="col-md-4 col-form-label text-md-right">Address</label>
 
                             <div class="col-md-6">
                                 <input id="alamat_pembeli" type="text" class="form-control @error('alamat_pembeli') is-invalid @enderror" name="alamat_pembeli" value="{{ old('alamat_pembeli') }}" required autocomplete="alamat_pembeli" autofocus>
@@ -159,7 +159,7 @@
                         </div>
 
                          <div class="row mb-3">
-                            <label for="keterangan_pembeli" class="col-md-4 col-form-label text-md-right">Keterangan</label>
+                            <label for="keterangan_pembeli" class="col-md-4 col-form-label text-md-right">Description</label>
 
                             <div class="col-md-6">
                                 <input id="keterangan_pembeli" type="text" class="form-control @error('keterangan_pembeli') is-invalid @enderror" name="keterangan_pembeli" value="{{ old('keterangan_pembeli') }}" required autocomplete="keterangan_pembeli" autofocus>
@@ -171,22 +171,37 @@
                                 @enderror
                             </div>
                         </div>
-
-                         <div class="form-group justify-content-end">
-                            <button type="submit" class="btn btn-success">Order</button>
+                            <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Order</button>
                         </div>
-
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
     </section>
+      <!-- medium modal -->
+    <div class="modal fade" id="mediumModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="mediumBody">
+                    <div>
+                        <!-- the result to be displayed apply here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
  <!-- Navbar -->
      @include('partials.footer')
     <!-- End Navbar -->
-@endsection
     </section>
    
     <script

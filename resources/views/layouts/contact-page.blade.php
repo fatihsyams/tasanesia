@@ -33,6 +33,9 @@
         .row1{
           margin-top:2rem !important;
         }
+        .row .no-gutters {
+          flex-direction: row-reverse !important;
+        }
        }
 
     </style>
@@ -67,7 +70,7 @@
         <div class="row justify-content-center ">
           <div class="col-md-12 ">
             <div class="wrapper">
-              <div class="row no-gutters flex-column-reverse">
+              <div class="row no-gutters ">
                 <div
                   class="
                     col-lg-8 col-md-7

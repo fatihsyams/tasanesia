@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,7 +14,7 @@
       crossorigin="anonymous"
     />
 
-    <title>Hello, world!</title>
+    <title>{{ $data->nama_produk }}</title>
   </head>
   <body>
     <!-- Navbar -->
@@ -32,14 +32,14 @@
           </div>
           <div class="col-lg-6 mt-5">
             <h2 style="color: #28a745">{{ $data->nama_produk }}</h2>
-            <p class="mt-4">{{ $data->jumlah_produk }}</p>
-            <p>{{ $data->harga_produk }}</p>
-            <p>{{ $data->status_produk }}</p>
+            <p class="mt-4">Stock : {{ $data->jumlah_produk }}</p>
+            <p>Price : Rp. {{ $data->harga_produk }}</p>
+            <p>Category : {{ $data->status_produk }}</p>
 
-            <a href="{{url('order?produk_id='.$data->id)}}" class="btn btn-primary" >Order Now</a>
+            <a href="{{url('order?produk_id='.$data->id)}}" class="btn" style="background-color: #28a745; color:white" >Order Now</a>
           </div>
           <h2 style="color: #28a745" class="mt-4">Description</h2>
-          <hr style="width: 10%;" class="ms-3">
+          <hr style="width: 13%;" class="ms-3">
           <p class="mt-2">{{ $data->keterangan_produk }}</p>
         </div>
       </div>

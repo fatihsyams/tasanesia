@@ -3,20 +3,22 @@
 @section('content')
 <table class="table table-bordered">
         <tr>
-            <th>No</th>
-            <th>Nama Pembeli</th>
-            <th>Email Pembeli</th>
-            <th>No Handphone</th>
-            <th>Nama Product</th>
-            <th>Jumlah Product</th>
-            <th>Alamat Pembeli</th>
-            <th>Keterangan Pembeli</th>
+            <th>No. Order</th>
+            <th>Buyer ID</th>
+            <th>Buyer Name</th>
+            <th>Buyer Email</th>
+            <th>Handphone No.</th>
+            <th>Product Name</th>
+            <th>Product Total</th>
+            <th>Buyer Address</th>
+            <th>Buyer Description</th>
            
         </tr>
    
     @foreach ($orders as $order)
         <tr>
             <td>{{ $order->id }}</td>
+            <td>{{ $user->id }}</td>
             <td>{{ $order->nama_pembeli }}</td>
             <td>{{ $order->email_pembeli }}</td>
             <td>{{ $order->no_hp_pembeli }}</td>

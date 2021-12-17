@@ -80,8 +80,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2 py-3 bg-success">
-                <p class="py-2 text-center bg-white" style="border-radius: 10px;"><a href="{{route('management-product')}}" style="color: black; text-decoration: none;">Manajemen Produk</a></p>
-                <p class="py-2 text-center bg-white" style="border-radius: 10px;"><a href="{{route('management-order')}}" style="color: black; text-decoration: none;">Manajemen Pesanan</a></p>
+                <p class="py-2 text-center bg-white" style="border-radius: 10px;"><a href="{{route('management-product')}}" style="color: black; text-decoration: none;">Product Management</a></p>
+                <p class="py-2 text-center bg-white" style="border-radius: 10px;"><a href="{{route('management-order')}}" style="color: black; text-decoration: none;">Order Management</a></p>
             </div>
             <div class="col-lg-8">
                 @yield('content')

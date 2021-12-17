@@ -22,9 +22,10 @@ class OrderController extends Controller
     }
 
     public function indexDashboard()
-    {
+    {   
+        $user = Auth::user();
         $data = Order::all();
-        return view('layouts.order.index-dashboard', ['orders' => $data]);
+        return view('layouts.order.index-dashboard', ['orders' => $data], ['user' => $user]);
 
         // return view('layouts.order.index-dashboard');
 
@@ -58,11 +59,8 @@ class OrderController extends Controller
             'alamat_pembeli' => $request->alamat_pembeli,
             'keterangan_pembeli' => $request->keterangan_pembeli,
 
-
         ]);
-
-        return redirect('checkout-product')->with('berhasil', 'data berhasil di tambahkan');
-
+        return redirect('home')->with('berhasil', 'data berhasil di tambahkan');
     }
 
     /**

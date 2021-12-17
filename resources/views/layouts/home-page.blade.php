@@ -48,8 +48,8 @@
             <h3 class="our-campaign">OUR CAMPAIGN</h3>
             <hr />
 
-            <a href="/campaign2"
-              ><h4 class="title-text">Oriental Plant by Comunity</h4></a
+            <a href="/campaign2" 
+              ><h4 class="title-text" >Oriental Plant by Comunity</h4></a
             >
 
             <p class="p-text">
@@ -94,27 +94,17 @@
                   data-bs-slide-to="2"
                   aria-label="Slide 3"
                 ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="3"
-                  aria-label="Slide 4"
-                ></button>
               </div>
               <div id="home-carrousel-responsive" class="carousel-inner">
                 <div class="carousel-item active">
                   <img
-                    src="/assets/img/nanas-carrousel.jpg"
+                    src="/assets/img/sexy-pink.jpeg"
                     class="d-block w-100"
                     alt="..."
                   />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/img/nanas-carrousel-2.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
+                  <div class="carousel-content">
+                    <p>Ornamental Plants</p>
+                  </div>
                 </div>
                 <div class="carousel-item">
                   <img
@@ -122,13 +112,19 @@
                     class="d-block w-100"
                     alt="..."
                   />
+                  <div class="carousel-content">
+                    <p>Halal Foods</p>
+                  </div>
                 </div>
                 <div class="carousel-item">
                   <img
-                    src="assets/img/halal-food-2.jpg"
+                    src="assets/img/nanas-carrousel-2.jpg"
                     class="d-block w-100"
                     alt="..."
                   />
+                  <div class="carousel-content">
+                    <p>Fresh Fruits</p>
+                  </div>
                 </div>
               </div>
               <button
@@ -173,7 +169,7 @@
               class="text-center mt-3 mb-4"
               style="font-weight: 700; color: #28a745"
             >
-              Our Product
+              Our Product Category
             </h2>
             <div
               class="col-lg-2 mt-sm-4 mt-lg-0 text-center"
@@ -218,11 +214,6 @@
               />
               <img
                 class="mb-2 mt-2 img-fluid img-our-partner"
-                src="/assets/logos/pelita-desa.png"
-                alt=""
-              />
-              <img
-                class="mb-2 mt-2 img-fluid img-our-partner"
                 src="/assets/logos/permata-desa-indonesia.jpeg"
                 alt=""
               />
@@ -249,80 +240,95 @@
             </div>
             <div
               class="col-lg-10 horizontal-scrollable"
-              style="max-height: 400px"
+              style="max-height: 1000px"
             >
-              <div class="row mx-2">
+              <div class="row mx-2 d-flex" >
                 <div class="col-lg-4 col-md-6 p-3">
+                  <div class="card" style="width: 18rem;">
+                  <a href="{{ url('show-product?kategory_produk=ornamental-plants') }}">
+                  <img
+                    class="img-fluid img-border"
+                    src="/assets/img/sexy-pink.jpeg"
+                    alt=""
+                    style="max-width: 100%"
+                    />
+                  </a>
+                   <div class="card-body">
+                     <h5 class="card-title text-center">Ornamental Plants</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-3">
+                  <div class="card" style="width: 18rem;">
+                  <a href="{{ url('show-product?kategory_produk=halal-food') }}">
+                  <img
+                    class="img-fluid img-border"
+                    src="/assets/img/halal-food.jpg"
+                    alt=""
+                    style="max-width: 100%"
+                    />
+                  </a>
+                   <div class="card-body">
+                     <h5 class="card-title text-center">Halal Foods</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p-3">
+                  <div class="card" style="width: 18rem;">
+                  <a href="{{ url('show-product?kategory_produk=fresh-fruit') }}">
                   <img
                     class="img-fluid img-border"
                     src="/assets/img/nanas-carrousel.jpg"
                     alt=""
                     style="max-width: 100%"
-                  />
-                  <h4 class="text-wrap mt-2 mb-3" style="text-align: center">
-                    Ornamental Plants
-                  </h4>
-                  <p class="text-wrap p-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec nec nunc ultrices est suscipit ullamcorper id vitae
-                    nulla. Proin efficitur nisi vel pulvinar pretium. Quisque eu
-                    pretium ipsum. <a href="">Read more</a>
-                  </p>
+                    />
+                  </a>
+                   <div class="card-body">
+                     <h5 class="card-title text-center">Fresh Fruits</h5>
+                    </div>
+                  </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 p-3">
+            <!-- <div class="col-lg-2 col-md-6 p-3">
                   <img
                     class="img-fluid img-border"
                     src="/assets/img/halal-food-2.jpg"
                     alt=""
                     style="max-width: 100%"
                   />
-                  <a class="text-wrap mt-2 mb-3" style="text-align: center" href="{{ url('show-product?kategory_produk=halal-food') }}">
+                  <h6 class="text-wrap mt-2 mb-3" style="text-align: center">
                     Halal Food
-</a >
+                  </h6>
                   <p class="text-wrap p-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Donec nec nunc ultrices est suscipit ullamcorper id vitae
                     nulla. Proin efficitur nisi vel pulvinar pretium. Quisque eu
                     pretium ipsum. <a href="">Read more</a>
                   </p>
+                </div> -->
+                <!-- @foreach($products as $product)
+            <div class="col-lg-4 mt-md-3">
+              <div class="card" style="width: 18rem">
+                <img
+                src="{{$product['gambar_produk']}}"
+                class=" img-fluid card-img-top"
+                alt="..."
+                style="width: 100%; max-height: 188px"
+                />
+                <div class="card-body">
+                    <h5 class="card-title"><a class="normal-anchor" href="{{ route('detail-product', $product->id) }}">{{$product['nama_produk']}}</a></h5>
+                    <div class="row">
+                       <div class="col-6">
+                         <p style="color: #fbc531">Rp. {{$product['harga_produk']}}</p>
+                       </div>
+                       <div class="col-6">
+                         <p class="text-end">{{$product['status_produk']}}</p>
+                       </div>
+                    </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 p-3">
-                  <img
-                    class="img-fluid img-border"
-                    src="/assets/img/nanas-carrousel.jpg"
-                    alt=""
-                    style="max-width: 100%"
-                  />
-                  <h4 class="text-wrap mt-2 mb-3" style="text-align: center">
-                    Pineapple
-                  </h4>
-                  <p class="text-wrap p-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec nec nunc ultrices est suscipit ullamcorper id vitae
-                    nulla. Proin efficitur nisi vel pulvinar pretium. Quisque eu
-                    pretium ipsum. <a href="">Read more</a>
-                  </p>
-                </div>
-
-                <div class="col-lg-4 col-md-6 p-3">
-                  <img
-                    class="img-fluid img-border"
-                    src="/assets/img/nanas-carrousel.jpg"
-                    alt=""
-                    style="max-width: 100%"
-                  />
-                  <h4 class="text-wrap mt-2 mb-3" style="text-align: center">
-                    Avocado
-                  </h4>
-                  <p class="text-wrap p-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec nec nunc ultrices est suscipit ullamcorper id vitae
-                    nulla. Proin efficitur nisi vel pulvinar pretium. Quisque eu
-                    pretium ipsum. <a href="">Read more</a>
-                  </p>
-                </div>
+            </div>
+        </div>
+         @endforeach -->
+            </div>
               </div>
             </div>
           </div>
@@ -330,7 +336,49 @@
       </div>
     </section>
     <!-- end section 2 -->
+    <!-- section 3 -->
     <section>
+      <div class="container-fluid p-2 my-2 pb-5"  style="margin-bottom: 100px">
+        <div class="container mt-3">
+          <div class="row no-gutters">
+          <h2
+              class="text-center mt-3 mb-4"
+              style="font-weight: 700; color: #28a745"
+            >
+              Our Product
+            </h2>
+            @foreach($products as $product)
+            @if($loop->index < 9)
+            <div class="col-lg-4 mt-md-3">
+              <div class="card" style="width: 18rem">
+                <img
+                src="{{$product['gambar_produk']}}"
+                class=" img-fluid card-img-top"
+                alt="..."
+                style="width: 100%; max-height: 188px"
+                />
+                <div class="card-body">
+                    <h5 class="card-title"><a class="normal-anchor" href="{{ route('detail-product', $product->id) }}">{{$product['nama_produk']}}</a></h5>
+                    <div class="row">
+                       <div class="col-6">
+                         <p style="color: #fbc531">Rp. {{$product['harga_produk']}}</p>
+                       </div>
+                       <div class="col-6">
+                         <p class="text-end">{{$product['status_produk']}}</p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+            @endif
+         @endforeach
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section 3 -->
+    <section>
+      <div class="container-fluid p-2 my-4 pb-5" style="background-color: #f1f2f6;">
       <div class="container mt-3">
         <div class="row no-gutters">
           <div class="col-lg-2 mt-sm-4 mt-lg-0" id="our-campaign">
@@ -354,49 +402,92 @@
             </h2>
 
             <div class="row">
-              <div class="col-lg-6 col-md-6 p-3 col-sm-6 text-center">
-                <img
-                  class="img-fluid img-border"
-                  src="/assets/agro.jfif"
-                  alt=""
-                  style="width: 100%"
-                />
-                <h4 class="text-wrap mt-2 mb-3" style="text-align: center">
-                  Ornamental Plants
-                </h4>
-                <p class="p-text" style="text-align: start">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  nec nunc ultrices est suscipit ullamcorper id vitae nulla.
-                  Proin efficitur nisi vel pulvinar pretium. Quisque eu pretium
-                  ipsum. Sed venenatis id turpis et placerat. Morbi vulputate
-                  rhoncus magna, eu mattis risus dapibus a. Fusce placerat
-                  dictum nulla ac venenatis. Sed dapibus et erat et pharetra.
-                  Duis et ultrices lorem. <a href="">Read more</a>
-                </p>
+                <div class="col-lg-6 col-md-6 p-3 col-sm-6 text-center m-0">
+                  <img
+                    class="img-fluid img-border"
+                    src="/assets/img/sexy-pink.jpeg"
+                    alt=""
+                    style="width: 100%; max-height: 200px"
+                  />
+                  <h4 class="text-wrap mt-2 mb-3" style="text-align: center">
+                    Ornamental Plants by Community
+                  </h4>
+                  <p class="p-text" style="text-align: start">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec nec nunc ultrices est suscipit ullamcorper id vitae
+                    nulla. Proin efficitur nisi vel pulvinar pretium. Quisque eu
+                    pretium ipsum. Sed venenatis id turpis et placerat. Morbi
+                    vulputate rhoncus magna, eu mattis risus dapibus a. Fusce
+                    placerat dictum nulla ac venenatis. Sed dapibus et erat et
+                    pharetra. Duis et ultrices lorem. <a href="/campaign2">Read more</a>
+                  </p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 p-3 text-center">
+                  <img
+                    class="img-fluid img-border"
+                    src="/assets/img/halal-food.jpeg"
+                    alt=""
+                    style="width: 100%; max-height: 200px"
+                  />
+                  <h4 class="text-wrap mt-2 mb-3" style="text-align: center">
+                    Halal Food goes to America
+                  </h4>
+                  <p class="p-text" style="text-align: start">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec nec nunc ultrices est suscipit ullamcorper id vitae
+                    nulla. Proin efficitur nisi vel pulvinar pretium. Quisque eu
+                    pretium ipsum. Sed venenatis id turpis et placerat. Morbi
+                    vulputate rhoncus magna, eu mattis risus dapibus a. Fusce
+                    placerat dictum nulla ac venenatis. Sed dapibus et erat et
+                    pharetra. Duis et ultrices lorem. <a href="/campaign">Read more</a>
+                  </p>
+                </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 p-3 text-center">
-                <img
-                  class="img-fluid img-border"
-                  src="/assets/agro.jfif"
-                  alt=""
-                  style="width: 100%"
-                />
-                <h4 class="text-wrap mt-2 mb-3" style="text-align: center">
-                  Ornamental Plants
-                </h4>
-                <p class="p-text" style="text-align: start">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  nec nunc ultrices est suscipit ullamcorper id vitae nulla.
-                  Proin efficitur nisi vel pulvinar pretium. Quisque eu pretium
-                  ipsum. Sed venenatis id turpis et placerat. Morbi vulputate
-                  rhoncus magna, eu mattis risus dapibus a. Fusce placerat
-                  dictum nulla ac venenatis. Sed dapibus et erat et pharetra.
-                  Duis et ultrices lorem. <a href="">Read more</a>
-                </p>
+              <div class="row">
+                <div class="col-lg-6 col-md-6 p-3 col-sm-6 text-center m-0">
+                  <img
+                    class="img-fluid img-border"
+                    src="/assets/img/sexy-pink.jpeg"
+                    alt=""
+                    style="width: 100%; max-height: 200px"
+                  />
+                  <h4 class="text-wrap mt-2 mb-3" style="text-align: center">
+                    Ornamental Plants by Community
+                  </h4>
+                  <p class="p-text" style="text-align: start">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec nec nunc ultrices est suscipit ullamcorper id vitae
+                    nulla. Proin efficitur nisi vel pulvinar pretium. Quisque eu
+                    pretium ipsum. Sed venenatis id turpis et placerat. Morbi
+                    vulputate rhoncus magna, eu mattis risus dapibus a. Fusce
+                    placerat dictum nulla ac venenatis. Sed dapibus et erat et
+                    pharetra. Duis et ultrices lorem. <a href="/campaign2">Read more</a>
+                  </p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 p-3 text-center">
+                  <img
+                    class="img-fluid img-border"
+                    src="/assets/img/halal-food.jpeg"
+                    alt=""
+                    style="width: 100%; max-height: 200px"
+                  />
+                  <h4 class="text-wrap mt-2 mb-3" style="text-align: center">
+                    Halal Food goes to America
+                  </h4>
+                  <p class="p-text" style="text-align: start">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec nec nunc ultrices est suscipit ullamcorper id vitae
+                    nulla. Proin efficitur nisi vel pulvinar pretium. Quisque eu
+                    pretium ipsum. Sed venenatis id turpis et placerat. Morbi
+                    vulputate rhoncus magna, eu mattis risus dapibus a. Fusce
+                    placerat dictum nulla ac venenatis. Sed dapibus et erat et
+                    pharetra. Duis et ultrices lorem. <a href="/campaign">Read more</a>
+                  </p>
+                </div>
               </div>
-            </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
     <!-- Navbar -->

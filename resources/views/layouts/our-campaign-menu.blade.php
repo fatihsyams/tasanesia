@@ -58,12 +58,12 @@
                 <div class="col-lg-6 col-md-6 p-3 col-sm-6 text-center m-0">
                   <img
                     class="img-fluid img-border"
-                    src="/assets/agro.jfif"
+                    src="/assets/img/sexy-pink.jpeg"
                     alt=""
-                    style="width: 100%"
+                    style="width: 100%; max-height: 200px"
                   />
                   <h4 class="text-wrap mt-2 mb-3" style="text-align: center">
-                    Ornamental Plants
+                    Ornamental Plants by Community
                   </h4>
                   <p class="p-text" style="text-align: start">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -72,18 +72,18 @@
                     pretium ipsum. Sed venenatis id turpis et placerat. Morbi
                     vulputate rhoncus magna, eu mattis risus dapibus a. Fusce
                     placerat dictum nulla ac venenatis. Sed dapibus et erat et
-                    pharetra. Duis et ultrices lorem. <a href="">Read more</a>
+                    pharetra. Duis et ultrices lorem. <a href="/campaign2">Read more</a>
                   </p>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 p-3 text-center">
                   <img
                     class="img-fluid img-border"
-                    src="/assets/agro.jfif"
+                    src="/img/halal-food.jpeg"
                     alt=""
-                    style="width: 100%"
+                    style="width: 100%; max-height: 200px"
                   />
                   <h4 class="text-wrap mt-2 mb-3" style="text-align: center">
-                    Ornamental Plants
+                    Halal Food goes to America
                   </h4>
                   <p class="p-text" style="text-align: start">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -92,20 +92,20 @@
                     pretium ipsum. Sed venenatis id turpis et placerat. Morbi
                     vulputate rhoncus magna, eu mattis risus dapibus a. Fusce
                     placerat dictum nulla ac venenatis. Sed dapibus et erat et
-                    pharetra. Duis et ultrices lorem. <a href="">Read more</a>
+                    pharetra. Duis et ultrices lorem. <a href="/campaign">Read more</a>
                   </p>
                 </div>
               </div>
               <div class="row">
-                <div class="col-lg-6 col-md-6 p-3 col-sm-6 text-center">
+                <div class="col-lg-6 col-md-6 p-3 col-sm-6 text-center m-0">
                   <img
                     class="img-fluid img-border"
-                    src="/assets/agro.jfif"
+                    src="/assets/img/sexy-pink.jpeg"
                     alt=""
-                    style="width: 100%"
+                    style="width: 100%; max-height: 200px"
                   />
                   <h4 class="text-wrap mt-2 mb-3" style="text-align: center">
-                    Ornamental Plants
+                    Ornamental Plants by Community
                   </h4>
                   <p class="p-text" style="text-align: start">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -114,18 +114,18 @@
                     pretium ipsum. Sed venenatis id turpis et placerat. Morbi
                     vulputate rhoncus magna, eu mattis risus dapibus a. Fusce
                     placerat dictum nulla ac venenatis. Sed dapibus et erat et
-                    pharetra. Duis et ultrices lorem. <a href="">Read more</a>
+                    pharetra. Duis et ultrices lorem. <a href="/campaign2">Read more</a>
                   </p>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 p-3 text-center">
                   <img
                     class="img-fluid img-border"
-                    src="/assets/agro.jfif"
+                    src="/img/halal-food.jpeg"
                     alt=""
-                    style="width: 100%"
+                    style="width: 100%; max-height: 200px"
                   />
                   <h4 class="text-wrap mt-2 mb-3" style="text-align: center">
-                    Ornamental Plants
+                    Halal Food goes to America
                   </h4>
                   <p class="p-text" style="text-align: start">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -134,10 +134,11 @@
                     pretium ipsum. Sed venenatis id turpis et placerat. Morbi
                     vulputate rhoncus magna, eu mattis risus dapibus a. Fusce
                     placerat dictum nulla ac venenatis. Sed dapibus et erat et
-                    pharetra. Duis et ultrices lorem. <a href="">Read more</a>
+                    pharetra. Duis et ultrices lorem. <a href="/campaign">Read more</a>
                   </p>
                 </div>
               </div>
+          </div>
             </div>
           </div>
         </div>

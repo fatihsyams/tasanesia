@@ -38,7 +38,7 @@
     @guest
     @if (Route::has('login'))
     <li class="nav-item " style="list-style-type: none;">
-      <a href="{{ route('login') }}" class="nav-link p-text account-auth-login">Login</a>
+      <a href="{{ route('login') }}" class="nav-link p-text account-auth-login" style="color:#28a745">Login</a>
     </li>
     @endif
 
@@ -50,7 +50,8 @@
 
     @else
      <li class="nav-item dropdown " style="list-style-type: none;">
-        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+        <a class="p-text" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="text-decoration: none; color: black" >
+        <img src="{{ URL::to('/') }}/assets/img/user-icon.png" alt="" style="width: 20px">
           {{ Auth::user()->name }}
         </a>
 

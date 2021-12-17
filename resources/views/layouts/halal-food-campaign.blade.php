@@ -44,11 +44,11 @@
               "
               class="img-penulis"
             />
-            <p class="nama-penulis">Dibuat oleh orang, 17 Januari 2215</p>
+            <p class="nama-penulis">Dibuat oleh admin, 17 Januari 2021</p>
           </div>
           <div class="container">
             <img
-              src="assets/agro.jfif"
+              src="/assets/img/sexy-pink.jpeg"
               class="img-header-campaign col-lg-12"
               alt=""
             />
