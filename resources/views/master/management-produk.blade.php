@@ -8,18 +8,18 @@
 </div>
 
 <table class="table table-bordered">
-        <tr>
-            <th>No.</th>
-            <th>Product Image</th>
-            <th>Product Name</th>
-            <th>Product Price</th>
-            <th>Product Total</th>
-            <th>Product Description</th>
-            <th>Product Status</th>
+        <tr class="text-center">
+            <th>No</th>
+            <th>Gambar Produk</th>
+            <th>Nama Produk</th>
+            <th>Harga Produk</th>
+            <th>Jumlah Produk</th>
+            <th>Keterangan Produk</th>
+            <th>Status Produk</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($products as $product)
-        <tr>
+        <tr  class="text-center">
             <td>{{ $product->id }}</td>
             <td><img
             src="{{$product['gambar_produk']}}"

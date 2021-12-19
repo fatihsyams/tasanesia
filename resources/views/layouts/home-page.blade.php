@@ -242,53 +242,27 @@
               class="col-lg-10 horizontal-scrollable"
               style="max-height: 1000px"
             >
-              <div class="row mx-2 d-flex" >
+              <div class="row mx-2">
+              @foreach($data as $item)
                 <div class="col-lg-4 col-md-6 p-3">
                   <div class="card" style="width: 18rem;">
                   <a href="{{ url('show-product?kategory_produk=ornamental-plants') }}">
                   <img
                     class="img-fluid img-border"
-                    src="/assets/img/sexy-pink.jpeg"
+                    src="{{$item['gambar']}}"
                     alt=""
                     style="max-width: 100%"
-                    />
-                  </a>
-                   <div class="card-body">
-                     <h5 class="card-title text-center">Ornamental Plants</h5>
-                    </div>
-                  </div>
+                  />
+                  <h4 class="text-wrap mt-2 mb-3" style="text-align: center">
+                   {{$item->name}}
+                  </h4>
+                  <p class="text-wrap p-text">
+                    {{ $item->keterangan}} <a href="">Read more</a>
+                  </p>
                 </div>
+              @endforeach
+
                 <div class="col-lg-4 col-md-6 p-3">
-                  <div class="card" style="width: 18rem;">
-                  <a href="{{ url('show-product?kategory_produk=halal-food') }}">
-                  <img
-                    class="img-fluid img-border"
-                    src="/assets/img/halal-food.jpg"
-                    alt=""
-                    style="max-width: 100%"
-                    />
-                  </a>
-                   <div class="card-body">
-                     <h5 class="card-title text-center">Halal Foods</h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6 p-3">
-                  <div class="card" style="width: 18rem;">
-                  <a href="{{ url('show-product?kategory_produk=fresh-fruit') }}">
-                  <img
-                    class="img-fluid img-border"
-                    src="/assets/img/nanas-carrousel.jpg"
-                    alt=""
-                    style="max-width: 100%"
-                    />
-                  </a>
-                   <div class="card-body">
-                     <h5 class="card-title text-center">Fresh Fruits</h5>
-                    </div>
-                  </div>
-                </div>
-            <!-- <div class="col-lg-2 col-md-6 p-3">
                   <img
                     class="img-fluid img-border"
                     src="/assets/img/halal-food-2.jpg"
@@ -304,30 +278,7 @@
                     nulla. Proin efficitur nisi vel pulvinar pretium. Quisque eu
                     pretium ipsum. <a href="">Read more</a>
                   </p>
-                </div> -->
-                <!-- @foreach($products as $product)
-            <div class="col-lg-4 mt-md-3">
-              <div class="card" style="width: 18rem">
-                <img
-                src="{{$product['gambar_produk']}}"
-                class=" img-fluid card-img-top"
-                alt="..."
-                style="width: 100%; max-height: 188px"
-                />
-                <div class="card-body">
-                    <h5 class="card-title"><a class="normal-anchor" href="{{ route('detail-product', $product->id) }}">{{$product['nama_produk']}}</a></h5>
-                    <div class="row">
-                       <div class="col-6">
-                         <p style="color: #fbc531">Rp. {{$product['harga_produk']}}</p>
-                       </div>
-                       <div class="col-6">
-                         <p class="text-end">{{$product['status_produk']}}</p>
-                       </div>
-                    </div>
                 </div>
-            </div>
-        </div>
-         @endforeach -->
             </div>
               </div>
             </div>
@@ -347,7 +298,7 @@
             >
               Our Product
             </h2>
-            @foreach($products as $product)
+            @foreach($data as $product)
             @if($loop->index < 9)
             <div class="col-lg-4 mt-md-3">
               <div class="card" style="width: 18rem">

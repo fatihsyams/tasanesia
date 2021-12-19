@@ -1,6 +1,7 @@
 <?php
 
-
+use App\Http\Controllers\KategoriController;
+use App\Models\Kategori;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,11 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('layouts/home-page');
-// });
-
-Route::get('/',  [App\Http\Controllers\ProductController::class, 'show2'])->name('show-product');
+Route::get('/', function () {
+    $data = Kategori::where('parent_id',null)->get();
+    return view('layouts/home-page',compact('data'));
+});
 
 Route::get('/contact', function () {
     return view('layouts/contact-page');
@@ -93,7 +93,11 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('management-product');
     Route::get('/management-produk', [App\Http\Controllers\ProductController::class, 'index'])->name('management-product');
     Route::get('/management-order', [App\Http\Controllers\OrderController::class, 'indexDashboard'])->name('management-order');
-    Route::get('/dashboard-admin', function(){
+    Route::resource('management-kategori',KategoriController::class);
+//     Route::get('/dashboard-admin', function(){
+//     return view('master.app-dashboard');
+// });
+Route::get('/dashboard-admin', function(){
     return view('master.app-dashboard');
 });
     Route::get('/order', [App\Http\Controllers\OrderController::class, 'index'])->name('order-product');

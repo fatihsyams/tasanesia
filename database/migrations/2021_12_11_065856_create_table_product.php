@@ -19,6 +19,8 @@ class CreateTableProduct extends Migration
             $table->integer('harga_produk');
             $table->integer('jumlah_produk');
             $table->string('keterangan_produk');
+            $table->integer('kategori_id');
+            $table->integer('subkategori_id');
             $table->string('gambar_produk');
             $table->string('status_produk');
             $table->timestamps();

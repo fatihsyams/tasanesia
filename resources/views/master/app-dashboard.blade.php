@@ -80,8 +80,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2 py-3 bg-success">
-                <p class="py-2 text-center bg-white" style="border-radius: 10px;"><a href="{{route('management-product')}}" style="color: black; text-decoration: none;">Product Management</a></p>
-                <p class="py-2 text-center bg-white" style="border-radius: 10px;"><a href="{{route('management-order')}}" style="color: black; text-decoration: none;">Order Management</a></p>
+                <p class="py-2 text-center bg-white" style="border-radius: 10px;"><a href="{{route('management-product')}}" style="color: black; text-decoration: none;">Manajemen Produk</a></p>
+                <p class="py-2 text-center bg-white" style="border-radius: 10px;"><a href="{{route('management-order')}}" style="color: black; text-decoration: none;">Manajemen Pesanan</a></p>
+                <p class="py-2 text-center bg-white" style="border-radius: 10px;"><a href="{{route('management-kategori.index')}}" style="color: black; text-decoration: none;">Manajemen Kategori</a></p>
             </div>
             <div class="col-lg-8">
                 @yield('content')
@@ -94,5 +95,48 @@
          
         </main> -->
     </div>
+     @stack('prepend-script')
+    <script src="{{ asset('assets/js/sweetalert.min.js') }}"></script> 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+
+ 
+    //sweetalert for success or error message
+    @if(session()->has('success'))
+        swal({
+            type: "success",
+            icon: "success",
+            title: "BERHASIL!",
+            text: "{{ session('success') }}",
+            timer: 3500,
+            showConfirmButton: false,
+            showCancelButton: false,
+            buttons: false,
+        });
+        @elseif(session()->has('error'))
+        swal({
+            type: "error",
+            icon: "error",
+            title: "GAGAL!",
+            text: "{{ session('error') }}",
+            timer: 3500,
+            showConfirmButton: false,
+            showCancelButton: false,
+            buttons: false,
+        });
+        @elseif(session()->has('info'))
+        swal({
+            type: "info",
+            icon: "info",
+            title: "INFO!",
+            text: "{{ session('info') }}",
+            timer: 3500,
+            showConfirmButton: false,
+            showCancelButton: false,
+            buttons: false,
+        });
+        @endif
+  </script>
+    @stack('addon-script')
 </body>
 </html>

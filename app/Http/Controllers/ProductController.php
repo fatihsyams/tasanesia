@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Kategori;
 use Facade\FlareClient\Stacktrace\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -27,7 +28,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('layouts.product.product-master');
+       $kategori = Kategori::where('parent_id',null)->get();
+
+        return view('layouts.product.product-master',compact('kategori'));
     }
 
     /**
@@ -51,13 +54,14 @@ class ProductController extends Controller
             'nama_produk' => $request->nama_produk,
             'harga_produk' => $request->harga_produk,
             'jumlah_produk' => $request->jumlah_produk,
-            'kategory_produk' => $request->kategory_produk,
+            'kategori_id' => $request->kategori_id,
+            'subkategori_id' => $request->subkategori,
             'keterangan_produk' => $request->keterangan_produk,
             'gambar_produk' => $image,
             'status_produk' => $request->status_produk,
         ]);
 
-        return redirect('create-product')->with('berhasil', 'data berhasil di tambahkan');
+        return redirect('create-product')->with('success', 'data berhasil di tambahkan');
 
     //   $data = Product::create($request->all());
     //   if($request->hasFile('gambar_produk')) {
